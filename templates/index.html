@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    users
+{% endblock %} 
+
+{% block body %}
+    <h1 style="color:#0F5EE9;" align="center" > Welcome User </h1>
+    <h4> Please sign in if you are one of my users if not sign up!</h4>
+
+    <form action="{{ url_for('signIn')}}" method="post">
+
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Name">
+        </div>
+
+         <div class="form-group">
+            <input class="form-control" name="password" type ="password" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm">Log in</button>
+        </div>
+    </form>
+
+{% endblock %}

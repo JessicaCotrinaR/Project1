@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    users
+{% endblock %} 
+
+{% block body %}
+    <h1 style="color:#0F5EE9;" align="center" > Welcome - BOOKS </h1>
+
+
+    
+    <a href="/logout">Logout</a>
+
+    <h4> Do a search of a book!</h4>
+    <h4> You can do a search of a book by: isbn, title or author: </h4>
+    
+    <form action="{{ url_for('search')}}" method="post">
+
+        <div class="form-group">
+            ISBN: <input class="form-control" name="isbn" placeholder="Isbn">
+        </div>
+
+         <div class="form-group">
+            TITLE: <input class="form-control" name="title"  placeholder="Title">
+        </div>
+
+         <div class="form-group">
+            AUTHOR: <input class="form-control" name="author" placeholder="author">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm">Search</button>
+        </div>
+    </form>
+{% endblock %}
+
+<!-- name is an attribute of html -->
